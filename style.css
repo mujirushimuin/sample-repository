@@ -1,0 +1,74 @@
+* {
+  /* パディングとボーダーを幅の計算に含める */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* ビューポートの高さいっぱいを使う */
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* フレックスボックスレイアウトで中央配置 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* グラデーション背景 */
+  background: linear-gradient(135deg, #4f8ef7, #59d2f7);
+  color: #1b1b1b;
+}
+
+.container {
+  /* 最大幅640px、ビューポート幅の90%以下 */
+  width: min(640px, 90vw);
+  padding: 2rem;
+  /* 四隅を丸くする */
+  border-radius: 18px;
+  /* 半透明の白背景 */
+  background: rgba(255, 255, 255, 0.92);
+  /* ドロップシャドウ */
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+  /* クランプで相対的かつ最小・最大値を設定 */
+  font-size: clamp(2rem, 2.5vw, 3rem);
+}
+
+p {
+  /* 行間を広くして読みやすく */
+  line-height: 1.8;
+  margin: 1rem 0 2rem;
+}
+
+button {
+  /* 上下・左右のパディング */
+  padding: 0.95rem 1.6rem;
+  border: none;
+  /* 円形に近いボタン */
+  border-radius: 999px;
+  /* ブルーの背景色 */
+  background: #2864d0;
+  color: #fff;
+  font-size: 1rem;
+  /* クリック可能なカーソル */
+  cursor: pointer;
+  /* トランジション：スムーズなアニメーション */
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+button:hover,
+button:focus {
+  /* ホバー時に濃いブルーに */
+  background: #154aa1;
+  /* ホバー時に上に移動 */
+  transform: translateY(-1px);
+}
+
+.message {
+  margin-top: 1.5rem;
+  font-size: 1.05rem;
+  /* 最小高さを確保してレイアウト崩れを防ぐ */
+  min-height: 1.5em;
+}
