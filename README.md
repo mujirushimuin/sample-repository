@@ -43,3 +43,28 @@
 - `git push origin {ブランチ名}`
   - 指定したブランチにローカルのコミットをアップロードする。
 
+- `git checkout {ブランチ名}`
+  - 今のブランチから指定したブランチに移動
+
+- `git checkout -b {ブランチ名}`
+  - 今のブランチから指定したブランチを作って移動
+
+- `git pull origin {ブランチ名}`
+  - 今いるブランチに指定したブランチの変更を取り込む
+
+- `git stash`
+  - 変更一時退避
+
+- `git stash pop`
+  - stashで変更していたものを元に戻す
+
+## Pull requestの方法
+
+1. `git checkout -b {ブランチ名}` を使って、新しいブランチを作成する。
+2. 変更内容をコミットする。
+3. `git push origin {ブランチ名}` で新しいブランチをリモートにアップロードする。
+4. GitHubの「Code」タブで「Compare & pull request」を押す。
+5. 「Create pull request」を押す。
+6. 必要に応じて内容を確認し、「Merge pull request」を押す。
+7. 「Confirm merge」を押してマージを完了する。
+
